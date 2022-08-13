@@ -11,3 +11,35 @@
   }
  }
 ```
+### 클라이언트 graphQL 사용하기 
+```
+npm i @apollo/client graphql
+npm i react-router-dom@6
+```
+
+- Apollo Client는 GrpahQL API를 호출하기 위해 사용되는 라이브러리입니다. 
+- 이번 포스팅에서는 React 앱에서 Apollo Client를 사용하여 GraphQL API를 호출하는 방법에 대해서 알아보겠습니다.
+
+```react
+import {ApolloClient, InMemoryCache} from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: "https://countries.trevorblades.com", // 그래프큐앨이 돌아가는 url
+  cache:ner InMemoryCache()
+});
+
+// 위에 기재한 url에 아래의 쿼리를 보냄  =? 데이터 패치하는 역함 ????
+client.query({
+    query: gq;`
+    {
+    alalMobies{
+    title}
+    }`
+})
+export default client
+```
+
+// https://www.daleseo.com/graphql-react-apollo-client/ 참고하
+-.app 을 ApolloProvider 로 감싸다. => 컴포넌트에서 useApolloClient 로 접근 가능
+- 위에 방법을 더 줄여주기 위해서 useQuery hook 사용
+- 
