@@ -6,7 +6,7 @@
 ### 사용법
 ```
  {
-  받구 싶은 데이터의 파라미터 {
+  받구 싶은 데이터의 파라미터 {1
   
   }
  }
@@ -16,6 +16,7 @@
 npm i @apollo/client graphql
 npm i react-router-dom@6
 ```
+
 
 - Apollo Client는 GrpahQL API를 호출하기 위해 사용되는 라이브러리입니다. 
 - 이번 포스팅에서는 React 앱에서 Apollo Client를 사용하여 GraphQL API를 호출하는 방법에 대해서 알아보겠습니다.
