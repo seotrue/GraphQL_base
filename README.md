@@ -42,4 +42,22 @@ export default client
 // https://www.daleseo.com/graphql-react-apollo-client/ 참고하
 -.app 을 ApolloProvider 로 감싸다. => 컴포넌트에서 useApolloClient 로 접근 가능
 - 위에 방법을 더 줄여주기 위해서 useQuery hook 사용
-- 
+
+#### useQuery (apllot/client): 선언형 코드
+```
+const ALL_MOVIES = gql`
+
+    // query getMovies은 생략 가능 함수명은 개발자 임의로 작성
+    query getMovies {
+        alalMobies{
+            title
+        }
+    }
+`
+export defult Movies(){
+// 이런 식으로 사용 가능
+const {data, loading, error} = useQuery(ALL_MOVIES)
+
+}
+
+```
